@@ -1,0 +1,308 @@
+@media(max-width: 768px){
+  /* smooth scrolling */
+  html{
+    scroll-behavior: smooth;
+  }
+  /*Entire Layout*/
+    /* #home,
+    #about,
+    #show,
+    #contact{
+      display: none;
+    } */
+  .cd-section{
+    height: auto;
+  }
+  .cd-section > div{
+    height: auto;
+    position: relative;
+  }
+  .content{
+    position: static;
+    width: 100%;
+    height: 100%;
+  }
+  /*Header*/
+  header{
+    width: 100vw;
+    transition: 0.5s;
+    z-index: 999;
+  }
+  header.active{
+    background-color: #fff;
+  }
+  .logo img{
+    padding-top: 0;
+    margin-left: 0;
+    opacity: 0;
+  }
+  .logo img.active{
+    opacity: 1;
+  }
+  .slogan{
+    display: none;
+  }
+  .gnb-inner{
+    /* width: 100vw; */
+    padding: 10px 0;
+    line-height: 0;
+    position: relative;
+  }
+  .gnb{
+    background: #fff;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    right: -270px;
+    width: 250px;
+    height: 100vh;
+    box-shadow: -5px 0 10px rgba(0,0,0,0.1);
+    transition: 0.5s;
+  }
+  .gnb.active{
+    right: 0;
+  }
+  .menu{
+    display: block;
+    margin-top: 120px;
+  }
+  .menu a{
+    line-height: 40px;
+    height: 40px;
+    text-align: right;
+    display: block;
+    padding-right: 20px;
+    color: #000;
+    font-size: 18px;
+  }
+  /*trigger*/
+  .trigger{
+    display: block;
+    width: 24px;
+    height: 14px;
+    position: absolute;
+    top: 25px;
+    right: 10px;
+  }
+  .trigger span{
+    z-index: 9999;
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+    transition: 0.5s;
+  }
+  .trigger span:nth-child(1){top: 0;}
+  .trigger span:nth-child(2){
+    top: 50%;
+    width: 90%;
+  }
+  .trigger span:nth-child(3){top: 100%;}
+  /*-------trigger.active--------*/
+  .trigger span.active{
+    background-color: #000000; 
+  }
+  .trigger.active span:nth-child(1){
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  .trigger.active span:nth-child(2){
+    top: 50%;
+    width: 90%;
+    opacity: 0;
+  }
+  .trigger.active span:nth-child(3){
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+  /*goToTop*/
+  .gototop{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 99;
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 53px;
+    background-color: #000;
+    border-radius: 50%;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .gototop.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  /*hiring*/
+  .btn-hiring{
+    bottom: 20px;
+    right: 20px;
+  }
+  /*--------------------- section: home ----------------------*/
+  .home-inner{
+    height: 100vh;
+  }
+  .opacity-image{
+    display: none;
+  }
+  .welcome-text{
+    width: 100%;
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+  .home-heading{
+    left: 20px;
+  }
+  .home-heading span{
+    font-size: 45px;
+  }
+  /*--------------------- section: about ----------------------*/
+  .about-inner{
+    height: 100vh;
+    border: none;
+  }
+  .about-inner > div{
+    width: 100%;
+    height: 100%;
+    float: none;
+  }
+  .about-model{
+    position: static;
+    padding: 100px 0;
+  }
+  .model-info{
+    padding-top: 40px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  .broadcast-slider{
+    width: 100%;
+  }
+  .spec ul li{
+    margin: 0 5px;
+  }
+  .spec ul li span{
+    font-weight: bold;
+    font-size: 12px;
+    margin-right: 5px;
+  }
+  .model-broadcast,
+  .about-photo{
+    display: none;
+  }
+  /*--------------------- section: pictorial ----------------------*/
+  .pictorial-inner{
+    padding: 30px 0;
+    border: none;
+  }
+  .pictorial-info{
+    width: 100%;
+    position: static;
+    transform: none;
+    display: block;
+  }
+  .cardContainer{
+    width: 100%;
+    height: 150px;
+    display: block;
+  }
+  .cardContainer > div{
+    font-size: 16px;
+  }
+  .cardContainer > div.card{
+    display: none;
+  }
+  .cardContainer:nth-of-type(1) div:last-child::before,
+  .cardContainer:nth-of-type(2) div:last-child::before,
+  .cardContainer:nth-of-type(3) div:last-child::before,
+  .cardContainer:nth-of-type(4) div:last-child::before{
+    content: '';
+  }
+  .cardContainer:hover div:first-child,
+  .cardContainer:hover div:last-child{
+    transform: none;
+    -webkit-transform: none;
+    -ms-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+  }
+  /*--------------------- section: show ----------------------*/
+  .show-inner{
+    height: auto;
+  }
+  .feature{
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+  .feature > div{
+    float: none;
+    width: 100%;
+    padding: 20px;
+  }
+  /*--------------------- section: contact ----------------------*/
+  .contact-inner{
+    height: auto;
+  }
+  .contact-feature{
+    width: 100%;
+    position: static;
+    transform: none;
+  }
+  .contact-feature > div{
+    float: none;
+    width: 100%;
+  }
+  /*--------------------- hiring ----------------------*/
+  .hiring-main{
+    height: 300px;
+  }
+  .hiring-heading{
+    width: 100%;
+    top: 60%;
+  }
+  .hiring-heading h1{
+    font-size: 32px;
+  }
+  .hiring-info{
+    padding: 20px;
+  }
+  .hiring-info > div{
+    float: none;
+    width: 100%;
+    height: auto;
+  }
+  .center-child{
+    position: static;
+    transform: none;
+    width: 100%;
+  }
+  .hiring-slogan{
+    padding: 50px 0;
+  }
+  .hiring-slogan p{
+    font-size: 26px;
+  }
+  .hiring-slogan p::before{
+    top: -95px;
+    font-size: 180px;
+  }
+  .hiring-contact ul{
+    display: block;
+    width: 100%;
+  }
+  .center-child h2{
+    font-size: 22px;
+  }
+  .featherlight .featherlight-close-icon{
+    font-size: 22px;
+    top: 35px;
+    right: 28px;
+  }
+}

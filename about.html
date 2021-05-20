@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+    body{
+      height: 100vh;
+      margin: 0;
+    }
+    *{
+      box-sizing: border-box;
+    }
+    ul{
+      list-style: none;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      padding-inline-start: 0;
+    }
+    a{text-decoration: none;}
+    .about-inner{
+      width: 100%;
+      height: 100%;
+      border: 5px solid red;
+    }
+    .about-inner > div{
+      float: left;
+      border: 3px solid blue;
+    }
+    .about-inner .photo{
+      width: 60%;
+      height: 100%;
+      background: url(images/2020_fw03.jpg) no-repeat center center/ cover;
+    }
+    .profile{
+      width: 40%;
+      height: 100%;
+      padding-top: 150px;
+      background-color: #ffcc00;
+    }
+    .model-photo{
+      width: 250px;
+      height: 250px;
+      margin: auto;
+      border-radius: 50%;
+      background: url(images/profile.jpg) no-repeat center center/ cover;
+      cursor: pointer;
+    }
+    .model-photo::before{
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: rgba(0,0,0,0.2);
+      opacity: 1;
+      transition: .3s;
+    }
+    .model-photo:hover::before{
+      opacity: 0;
+    }
+    .model-info{
+      width: 100%;
+      overflow: hidden;
+    }
+    .model-info *{
+      text-align: center;
+    }
+    .model-info h3{}
+    .model-link{}
+    .model-link a{
+      font-size: 18px;
+      margin-left: 10px;
+    }
+    .model-link a:nth-child(1){
+      margin-left: 0;
+      font-weight: bold;
+    }
+    .spec{
+      width: 100%; 
+      margin: 20px auto;
+      /* background-color: #ff00cc; */
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
+    .spec li{
+      float: left;
+      font-weight: 500;
+      margin: 0 10px;
+    }
+    .spec li:nth-child(1){
+      margin-left: 0;
+    }
+    .spec li span{
+      font-weight: bold;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="about-inner">
+    <div class="profile">
+      <div class="model-photo"></div>
+      <div class="model-info">
+        <h3 class="name">CHOI, SO RA | 최소라</h3>
+        <div class="model-link">
+          <a href="#" class="career">+ Career</a>
+          <a href="#" class="pdf"><i class="fa fa-tags"></i></a>
+          <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+        </div>
+        <ul class="spec">
+          <li>
+            <span>Height</span>179
+          </li>
+          <li>
+            <span>Size</span>30-22-34
+          </li>
+          <li>
+            <span>Shoes</span>250
+          </li>
+          <li>
+            <span>Birth</span>1992
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="photo">
+      <img src="images/2020_fw01.jpg" alt="#">
+      <img src="images/2020_fw02.jpg" alt="#">
+      <img src="images/2020_fw03.jpg" alt="#">
+      <img src="images/2020_fw04.jpg" alt="#">
+    </div>
+  </div>
+</body>
+</html>
